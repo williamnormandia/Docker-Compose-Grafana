@@ -27,7 +27,7 @@ cd Docker-Compose-Grafana
 ```
 ### Criando persistencia para os dados
 ```bash
-mkdir -p /srv/docker/grafana/data; chown 472:472 /srv/docker/grafana/data
+mkdir -p /srv/docker/grafana/data; chown 472:472 srv/docker/grafana/data
 ```
 ### Iniciando o grafana com Docker compose
 ```shell
