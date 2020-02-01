@@ -1,16 +1,15 @@
-grafana:
-  image: grafana/grafana:latest
+version: '3.5'
+services:
+ grafana:
+  image: grafana/grafana
   container_name: grafana
-  restart: always
+  restart: on-failure
   ports:
     - "3000:3000"
-  env_file:
-    - 'env.grafana'
-  user: "0"
   volumes:
     # Dados persistentes.
     # sudo mkdir -p /srv/docker/grafana/data; chown 472:472 /srv/docker/grafana/data
-    - /srv/docker/grafana/data:/var/lib/grafana
+   - ./srv/docker/grafana/data:/var/lib/grafana
   ulimits:
    nproc: 65535
    nofile:
@@ -24,8 +23,3 @@ grafana:
     reservations:
       cpus: '0.3'
       memory: 256M
-  labels:
-   com.grafana.description: "Grafana server"
-   com.grafana.company: "Grafana"
-   com.grafana.component: "Grafana server"
-   com.grafana.dbtype: "file"
