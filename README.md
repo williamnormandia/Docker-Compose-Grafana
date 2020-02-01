@@ -7,9 +7,9 @@ Este projeto executado um **Grafana com dados persistentes.** de forma simples, 
 ## Instalando dependencias:
 
 ### Instalando docker
-
+```shell
 curl -fsSL https://get.docker.com | sh
-
+```
 ### Instalando o docker-compose
 curl -L https://github.com/docker/compose/releases/download/1.25.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 
