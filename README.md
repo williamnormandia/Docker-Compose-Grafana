@@ -53,7 +53,7 @@ Senha:admin
 ### Instalado plugin para Zabbix
 
 ```bash
-docker exec grafana-cli plugins install alexanderzobnin-zabbix-app
+docker exec grafana grafana-cli plugins install alexanderzobnin-zabbix-app
 ```
 ```bash
 docker-compose restart
