@@ -10,6 +10,7 @@ services:
     # Dados persistentes.
     # sudo mkdir -p /srv/docker/grafana/data; chown 472:472 /srv/docker/grafana/data
    - ./srv/docker/grafana/data:/var/lib/grafana
+   - /etc/timezone:/etc/timezone:ro 
   ulimits:
    nproc: 65535
    nofile:
