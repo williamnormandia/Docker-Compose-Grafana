@@ -25,6 +25,10 @@ git clone https://github.com/williamnormandia/Docker-Compose-Grafana.git
 ```shell
 cd Docker-Compose-Grafana
 ```
+### Criando persistencia para os dados
+```bash
+mkdir -p /srv/docker/grafana/data; chown 472:472 /srv/docker/grafana/data
+```
 ### Iniciando o grafana com Docker compose
 ```shell
 docker-compose up -d
@@ -34,5 +38,23 @@ docker-compose up -d
 docker exec grafana grafana-cli plugins install grafana-clock-panel
 ```
 ```shell
+docker-compose restart
+```
+### Acessando o Grafana
+
+Para acessar o grafana utilize 
+
+http://ip_do_seu_servidor:300
+Usuário:admin
+Senha:admin
+
+## Opcional
+
+### Instalado plugin para Zabbix
+
+```bash
+docker exec grafana-cli plugins install alexanderzobnin-zabbix-app
+```
+```bash
 docker-compose restart
 ```
